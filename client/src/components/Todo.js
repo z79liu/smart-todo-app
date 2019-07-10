@@ -24,6 +24,11 @@ class Todo extends Component {
           <textarea onChange={this.handleChange} value={this.state.todo} name="todo"></textarea>
           <button type="submit">Submit</button>
         </form>
+        <ul>
+          {this.state.list.map((todo)=>{
+            return <li>{todo}</li>
+          })}
+        </ul>
       </div>
     )
   }
